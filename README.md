@@ -1,6 +1,6 @@
 # 🧪 polymercost
 
-**Python tools for polymer compounding:** Calculate **Cost**, **Specific Gravity (SG)**, and estimate key **material properties** like Durometer, Modulus, and Tensile strength for compounded formulas.
+**Python tools for polymer compounding:** Calculate **Cost**, **Specific Gravity (SPG)**, and estimate key **material properties** like Durometer, Modulus, and Tensile strength for compounded formulas.
 
 ---
 
@@ -20,14 +20,14 @@ Python
 from polymercost import spg_costs, flex_clear_dop
 ```
 
- Define the compound formula: a list of tuples (Parts per Hundred Resin (phr), Specific Gravity (sg), Cost per pound ($))
+ Define the compound formula: a list of tuples (Parts per Hundred Resin (phr), Specific Gravity (spg), Cost per pound ($))
 
 Python
 ```
 formula = [(100, 1.4, 0.475), (20, 2.71, 0.0625)]
 ```
 
- Calculate SG, Cost by Weight, and Cost by Volume
+ Calculate SPG, Cost by Weight, and Cost by Volume
 ```
 spg, cost_wt, cost_vol = spg_costs(formula)
 print(f"Calculated Specific Gravity (SG): {spg:.3f}")
@@ -48,9 +48,7 @@ print(f"  Tensile Strength (psi): {tens}")
 ## ✨ Features
 spg_costs: The core function for calculating Specific Gravity, Cost/Weight, and Cost/Volume based on a compounded formula.
 
-Property Estimators: Functions (like flex_clear_dop) to estimate properties for common polymer systems (e.g., Durometer, Tensile Strength, Elongation).
-
-Blending Rules: Includes different blending rules for estimating properties of mixtures (e.g., arithmetic mean, log mean, inverse mean).
+Property Estimators: Functions (like flex_clear_dop) to estimate properties for common polymer systems (e.g., Durometer, Tensile Strength, Elongation).  These are for example only as some are made on very sparse datasets.  Ideally you would derive your own formulas here from your own lab data.  These are included and based off limited data.
 
 ## 📝 License
 polymercost is released under the MIT License.
