@@ -4,17 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "polymercost"
-version = "0.1.0"
-authors = [{ name = "Chris T. Mackey", email = "your.email@example.com" }]
+version = "0.1.1"
+authors = [{ name = "Chris T. Mackey", email = "chris.t.mackey@gmail.com" }]
 description = "Python tools for polymer compounding cost and properties estimation."
 readme = "README.md"
 requires-python = ">=3.8"
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+    "Operating System :: OS Independent"
 ]
-dependencies = []  # e.g., add "numpy" if needed
+dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/chrisTMackey/polymercost"
